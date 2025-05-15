@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wildlife Philippines</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+
+<style>
+body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    font-family: 'Inter', regular;
+    font-weight: 400; /* Regular */
+    background-color: #f8f2e7;
+    color: #333;
+    overflow-y: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.Headerlogo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-left h1 {
+    color: green;
+    font-size: 20pt;
+}
+
+section{
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+    background-color: #FAF3DD;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 750px;
+    position: relative;
+}
+
+.container img {
+    width: 100%;
+}
+
+/********* Images ***********/
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 15px 5vw;
+    margin-left: 10%;
+    height: 300px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.card {
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    background-color: #fff;
+    height: 100%;
+    border: 4px solid #000000;
+    outline: 1px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 12;
+    transition: .3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    & img {
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+.card:hover {
+    width: 200%;
+    height: 150%;
+    color: #000000;
+}
+
+.back {
+    position: absolute;
+    padding: 1rem 2rem;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+    right: 10%;
+    bottom: 14.5rem;
+}
+
+.back:hover {
+    background-color: #218838;
+}
+
+.info--card {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
+    height: 500px;
+    border-radius: 10px;
+    background-color: #f8f2e7;
+    box-shadow: 3px 3px 8px 8px grey;
+    position: absolute;
+    z-index: 100;
+}
+
+.cover {
+    filter: blur(5px);
+    display: none;
+    z-index: 99;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.grid-container {
+    position: fixed;
+    top: 5%;
+    height: 90%;
+    width: 95%;
+    margin: auto;   
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 10px;
+}
+
+.img-holder {
+    grid-row: span 1;
+}
+.class-info {
+    grid-row: span 2;
+}
+
+.main-info {
+    grid-row: span 1;
+}
+
+.image {
+    border: 4px solid #000000;
+    border-radius: 50%;
+    margin: auto;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+}
+.image img {
+    object-fit: cover;
+    object-position: center;
+    margin-top: -25%;
+    margin-left: -20%;
+    height: 200%;
+    width: auto;
+
+}
+
+.info{
+    width: 80%;
+}
+
+.info-text {
+    text-align: justify     ;
+}
+
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    height: 5rem;
+    margin-top: 5rem;
+}
+
+footer p {
+    padding: 2rem;
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <div class="Headerlogo">
+                <img src="Slides/logo.png" alt="Logo">
+            </div>
+            <h1>WILDLIFE PHILIPPINES</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Wildlife Classifications</a>
+            <a href="#">Feedback</a>
+            <a href="AboutUs.html">About Us</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1 style="text-align: center; margin: 1rem 2rem; font-size: 2rem; color: #084215;">Meet The Team</h1>
+            <div class="container">
+                <div class="card" onclick="toggleVisibility('card0')"><img src="IMG/20250506_064617_0000.png" alt=""></div>
+                <div class="card" onclick="toggleVisibility('card1')"><img src="IMG/20250506_064617_0001.png" alt=""></div>
+                <div class="card" onclick="toggleVisibility('card2')"><img src="IMG/20250506_064617_0002.png" alt=""></div>
+                <div class="card" onclick="toggleVisibility('card3')"><img src="IMG/20250506_064617_0003.png" alt=""></div>
+                <div class="card" onclick="toggleVisibility('card4')"><img src="IMG/20250506_064617_0004.png" alt=""></div>
+            </div>
+            <button class="back" onclick="document.location = 'AboutUs.html'">back</button>
+        </section>
+        <div class="info--card" id="card0" onclick="toggleVisibility('card0')" style="display: none;">
+        <div class="grid-container">
+            <div class="img-holder">
+                <div class="image">
+                    <img src="IMG/20250506_064617_0000.png" alt="">
+                </div>                
+            </div>
+            
+            <div class="main-info">
+                <div class="info">
+                    <h2>Manicane, John Warren </h2>
+                    
+                    <h2>ROLES:</h2>
+                    <p class="info-text">
+                        <br>Member
+                        <br>Developer
+                    </p>
+                </div>
+            </div>
+            <div></div>
+            <div class="class-info">
+                <h2>MOTTO:</h2>
+                <p class="info-text">
+                    “The wild is not ours to tame, but to cherish and protect"                
+                </p>
+            </div>
+        </div>
+        </div>
+
+        <div class="info--card" id="card1" onclick="toggleVisibility('card1')" style="display: none;">
+        <div class="grid-container">
+            <div class="img-holder">
+                <div class="image">
+                    <img src="IMG/20250506_064617_0001.png" alt="">
+                </div>                
+            </div>
+            <div class="main-info">
+                <div class="info">
+                    <h2>Espanto, Alexander Luis  </h2>
+                    
+                    <h2>ROLES:</h2>
+                    <p class="info-text">
+                        <br>Member
+                        <br>Developer
+                    </p>
+                </div>
+            </div>
+            <div></div>
+            <div class="class-info">
+                <h2>MOTTO:</h2>
+                <p class="info-text">
+                    “Protecting nature today means a thriving world tomorrow.”               
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="info--card" id="card2" onclick="toggleVisibility('card2')" style="display: none;">
+        <div class="grid-container">
+            <div class="img-holder">
+                <div class="image">
+                    <img src="IMG/20250506_064617_0002.png" alt="">
+                </div>                
+            </div>
+            
+            <div class="main-info">
+                <div class="info">
+                    <h2>Caampued, John Kyle  </h2>
+                    
+                    <h2>ROLES:</h2>
+                    <p class="info-text">
+                        <br>Member
+                        <br>Developer
+                    </p>
+                </div>
+            </div>
+            <div></div>
+            <div class="class-info">
+                <h2>MOTTO:</h2>
+                <p class="info-text">
+                    “Saving wildlife is survival, not kindness”                
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="info--card" id="card3" onclick="toggleVisibility('card3')" style="display: none;">
+        <div class="grid-container">
+            <div class="img-holder">
+                <div class="image">
+                    <img src="IMG/20250506_064617_0003.png" alt="">
+                </div>                
+            </div>
+            
+            <div class="main-info">
+                <div class="info">
+                    <h2>Mirang, Joshua Christian  </h2>
+                    
+                    <h2>ROLES:</h2>
+                    <p class="info-text">
+                        <br>Member
+                        <br>Developer
+                    </p>
+                </div>
+            </div>
+            <div></div>
+            <div class="class-info">
+                <h2>MOTTO:</h2>
+                <p class="info-text">
+                    “Wildlife is something which man cannot construct”                
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="info--card" id="card4" onclick="toggleVisibility('card4')" style="display: none;">
+        <div class="grid-container">
+            <div class="img-holder">
+                <div class="image">
+                    <img src="IMG/20250506_064617_0004.png" alt="">
+                </div>                
+            </div>
+            
+            <div class="main-info">
+                <div class="info">
+                    <h2>Legaspi, Jerick Harold </h2>
+                    
+                    <h2>ROLES:</h2>
+                    <p class="info-text">
+                        <br>Member
+                        <br>Developer
+                    </p>
+                </div>
+            </div>
+            <div></div>
+            <div class="class-info">
+                <h2>MOTTO:</h2>
+                <p class="info-text">
+                “The birds are watching, the frogs know your secrets and the trees are whispering “Respect the wild before it starts talking back.” ”
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    </main>
+    <footer>
+        <p>WILDLIFE PHILIPPINES © 2025. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function toggleVisibility(elementId){
+            var element = document.getElementById(elementId);
+            if (element.style.display === "none"){
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
