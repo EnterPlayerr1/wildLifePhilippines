@@ -1,1 +1,158 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wildlife Philippines</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', regular;
+    font-weight: 400; /* Regular */
+    background-color: #f8f2e7;
+    color: #333;
+    overflow-y: hidden;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.Headerlogo img {
+    width: 80px;
+    height: 80px;
+    margin-right: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header-left h1 {
+    color: green;
+    font-size: 20pt;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.col {
+    flex: 1;
+    min-width: 10rem;
+}
+
+.info-card {
+    margin-top: 2rem;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.info-card h2 {
+    margin-bottom: 1rem;
+    color: #084215;
+}
+
+.info-card p {
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #28a745;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+
+.button:hover {
+    background-color: #218838;
+}
+
+
+.container {
+    max-width: 1003px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    height: 5rem;
+    margin-top: 5rem;
+}
+
+footer p {
+    padding: 1rem;
+    margin-left: 1rem;
+}
+</style>
+</head>
+<body>
+
+    <header>
+        <div class="header-left">
+            <div class="Headerlogo">
+                <img src="Slides/logo.png" alt="Logo">
+            </div>
+            <h1>WILDLIFE PHILIPPINES</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Wildlife Classifications</a>
+            <a href="#">Feedback</a>
+            <a href="#">About Us</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="info-card">
+                            <h2>Our Story</h2>
+                            <p>WildlifePhilippines.com is an informational website dedicated to compiling and presenting detailed facts about animals found only in the Philippines. Click See more for more info.</p>
+                            <a href="Story.html" class="button">See More</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="info-card team-card">
+                            <h2>Meet The Team</h2>
+                            <p>We are BS Computer Science students of Our Lady of Fatima University. We aspire to create a product that provides benefits for everyone. For the full info click See More.</p>
+                            <a href="meetTheTeam.html" class="button">See More</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    </main>
+    <footer>
+        <p>WILDLIFE PHILIPPINES © 2025. All rights reserved.</p>
+    </footer>
+
+
+
+</body>
+</html>
